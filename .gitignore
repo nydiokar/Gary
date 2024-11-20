@@ -1,0 +1,12 @@
+ProjectOutline.txt
+ProjectStructure.txt
+*.db
+*.db-journal
+.log
+.cursorignore
+.env
+.pycache__
+venv
+env
+__pycache__/
+
