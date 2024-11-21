@@ -1,5 +1,4 @@
-ProjectOutline.txt
-ProjectStructure.txt
+*.txt
 *.db
 *.db-journal
 .log
@@ -9,4 +8,6 @@ ProjectStructure.txt
 venv
 env
 __pycache__/
-
+*.log
+test_comm.py
+test_commands.py

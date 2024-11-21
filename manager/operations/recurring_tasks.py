@@ -1,7 +1,7 @@
 # operations/recurring_tasks.py
 import sqlite3
 import logging
-from manager.utils import log_action, DB_PATH
+from utils import log_action, DB_PATH
 from datetime import datetime, timedelta
 def schedule_recurring_task(template_task_id: str, interval: str, next_occurrence: str) -> None:
     """Add a recurring task."""

@@ -1,6 +1,6 @@
 import sqlite3
 import logging
-from manager.utils import DB_PATH, DatabaseError, TaskStatus, log_action
+from utils import DB_PATH, DatabaseError, TaskStatus, log_action
 from operations.notifications import send_notification
 
 def accept_task(task_id: str, user_id: str, comments: str = None) -> None:

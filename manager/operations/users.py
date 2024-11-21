@@ -1,7 +1,7 @@
 import sqlite3
 import logging
-from manager.utils import DB_PATH, DatabaseError, UserRole, log_action
-from manager.utils import db_error_handler
+from utils import DB_PATH, DatabaseError, UserRole, log_action
+from utils import db_error_handler
 
 @db_error_handler
 def add_user(user_id: str, name: str, role: str) -> None:

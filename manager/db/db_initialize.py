@@ -1,10 +1,10 @@
 import sqlite3
 import logging
 from datetime import datetime
-from manager.operations.tags import add_tag
-from manager.operations.users import add_user
+from operations.tags import add_tag
+from operations.users import add_user
 # Database file path
-DB_PATH = "db/nesha_task_manager.db"
+DB_PATH = "nesha_task_manager.db"
 
 # Custom exception for database operations
 class DatabaseError(Exception):
@@ -45,16 +45,15 @@ def create_tables(cursor):
 
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS Tasks (
-            task_id TEXT PRIMARY KEY,
+            task_id INTEGER PRIMARY KEY AUTOINCREMENT,
             title TEXT NOT NULL,
             description TEXT,
-            priority INTEGER NOT NULL,
+            priority TEXT NOT NULL DEFAULT 'low',
             owner TEXT NOT NULL,
             status TEXT DEFAULT 'Pending',
             deadline DATETIME,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
             updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-            deleted_at DATETIME,
             FOREIGN KEY (owner) REFERENCES Users(user_id)
         );
     """)

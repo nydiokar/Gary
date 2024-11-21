@@ -1,6 +1,6 @@
 import sqlite3
 import logging
-from manager.utils import DB_PATH, DatabaseError, log_action, db_error_handler
+from utils import DB_PATH, DatabaseError, log_action, db_error_handler
 
 @db_error_handler
 def add_tag(name: str) -> int:

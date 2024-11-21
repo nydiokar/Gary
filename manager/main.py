@@ -1,8 +1,8 @@
 import logging
-from manager.db.db_initialize import initialize_db
-from manager.utils import DatabaseError
+from db.db_initialize import initialize_db
+from utils import DatabaseError
 from apscheduler.schedulers.background import BackgroundScheduler
-from manager.operations.recurring_tasks import process_recurring_tasks
+from operations.recurring_tasks import process_recurring_tasks
 
 def setup_logging():
     """Configure logging for the application."""
